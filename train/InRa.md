@@ -1,3 +1,5 @@
+Note: I've been a bit occupied lately, but I’ll complete the update in the coming days.
+
 ## (1) Training
 
 ### 1. Prepare your model
