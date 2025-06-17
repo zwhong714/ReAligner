@@ -72,7 +72,7 @@ conda activate InRa
 cd vllm
 VLLM_USE_PRECOMPILED=1 pip install --editable .
 
-VLLM_USE_V1=0 vllm serve wh-zhu/DeepSeek-R1-Distill-Qwen-7B-CLM
+VLLM_USE_V1=0 vllm serve wh-zhu/DeepSeek-R1-Distill-Qwen-7B-InRa
 ```
 
 
@@ -97,7 +97,7 @@ client = OpenAI(
         base_url=openai_api_base,
 )
 chat_response = client.chat.completions.create(
-    model="wh-zhu/DeepSeek-R1-Distill-Qwen-7B-CLM",
+    model="wh-zhu/DeepSeek-R1-Distill-Qwen-7B-InRa",
     messages=[
         {'role': 'user', 
         'content': """Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$."""}
