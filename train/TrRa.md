@@ -20,7 +20,7 @@ pip install transformers==4.45.0
 
 ## Quick Start
 
-Using `examples/train_full/llama3_full_sft.yaml` as an example:
+Using `examples/train_full/llama3_full_TrRa.yaml` as an example:
 
 ### 1. Prepare the Reference and Aligned Models
 
@@ -47,13 +47,13 @@ Adjust the hyperparameter `pref_beta` from `0` to a suitable value for best resu
 #### Single GPU:
 
 ```bash
-FORCE_TORCHRUN=1 llamafactory-cli train examples/train_full/llama3_full_sft.yaml
+FORCE_TORCHRUN=1 llamafactory-cli train examples/train_full/llama3_full_TrRa.yaml
 ```
 
 #### Multi-GPU:
 
 ```bash
-llamafactory-cli train examples/train_full/llama3_full_sft.yaml
+llamafactory-cli train examples/train_full/llama3_full_TrRa.yaml
 ```
 
 You can save checkpoints every 100 steps. Typically, 200–400 steps are sufficient for good performance.

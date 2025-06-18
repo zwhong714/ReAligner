@@ -1,0 +1,40 @@
+### model
+model_name_or_path: DeepSeek-R1-Distill-Qwen-1.5B-pre1
+### method
+stage: sft
+do_train: true
+finetuning_type: freeze
+freeze_trainable_layers: -1
+freeze_trainable_modules: all
+use_llama_pro: false
+
+### dataset
+dataset: short_cot
+template: deepseek3
+cutoff_len: 4096
+max_samples: 1000000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: DeepSeek-R1-Distill-Qwen-1.5B-InRa
+logging_steps: 10
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-5
+num_train_epochs: 3
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 500

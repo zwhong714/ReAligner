@@ -12,6 +12,9 @@
       "rejected": "rejected"
     }
   },
+  "short_cot":{
+    "hf_hub_url": "wh-zhu/short_cot_calibration"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
